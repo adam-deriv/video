@@ -1,108 +1,113 @@
 import { createMachine } from 'xstate';
 
-const stateMachine = 
-/** @xstate-layout N4IgpgJg5mDOIC5QEMAOqB0sCWUB2ArqgMQDKAkgOIByA+gKoAKioqA9jgC7Zt4sgAPRAFoAzAFYATBgBsAFkmT5ATmWS5ygAziANCACeIyQHY5GTaICMcuVeWWZM8ZpkBfV3rSYc+IsUoA8rQUNOTU-OxcPHxIgiKW1rJqmsbKonIAHGoy1nqGCGKayuZaxk4Z4sbi9jKi7p7oWLh42Hj+QSHUTBEc2Ny8-EIFlpIZGKKmUpWWFbWieSK2ZjlFxg7VxhJV9SBeTfitZFR0YT1RA7FDCcUalRlFlsrycrULBaOiGGrGmpKimi9RDIKjs9gA3bAQMBsDAAIwATmwAO6wMDEADCACUAKIAQQAKtizn1ooNEPYMDZtJZjBl-pIUsC3jJNF8XiNqakMrSMqDGhCoTDkABjThseHtWgANQC5HRRNikRJF1AQzELNkE2p4nElisNLkbxeMgwlScjIyGSUDj5mAF0IwIrFEsCtAAQrj0QBpSiYgL0agAEWJ-RiqpEQNZtR+up1eoSpje4gkprK4kyEzpTjcHl2-MhDqd4sluIAMscALLY6j4kOky4RjXR7W6-WJgyIFlmM02CbGmTKcS2jD2oWi4uuwPY0hY8iMfHkALhRW9UNkhAOT4ZR6DuSae6iSTJ4xG0SfdS-ObWRx64ejx3jl1BT34gKYusquIFSOamOWONtoaHYIDImyps824uIeZ53gWY7OmQuJSgqrCrvW4YIBSVK6rS9IWm8IxmMoLwWPYEzGKkciwYKD7OoGcDCvC2CoKGiHIR+YZfjSxSSCMWRPOo3LKBkbymMYlL2FUNg0toQLUYWwrCmwBB4JwkqMH6ABi5ClihIBKmuDYIOknxWGaCRAm2onieIThmhkcjWJYFhDrm4JwQ+SkqWprpujp5bUJQHHriZ4z-mUFm1AmBEvKa2Y0sm-7WJk8ljl5qnqaWuLLqh5ycUMoVmRFepRTSbxjLZOpAkl-wyLxyipZKbp+gA6qQekGehX7CEsXzbkCQlVXVomshRxEsnMmjaLxjWui+b7BUZPXpH1JWDcmw3AcIjimsm9jWFI9xWrybn5oKJboui-o1otGHLUR-XAqkQ2SG8DJjCY2SSKoya2XJOx4GwULwLEew+IQqC3d1ojCRgxjfQocjOLc2hAfkPWxQkUhalNGTyJIw7g60UNXI8cMTKUVQVA5epvBjrL7s4urUnuxqpXCiIomAJNGPDshQfDqQzBUJ7AXzY0w4Oyi0pkTzs0W8KOgANs0AC2YCqTzwy2bIUgDs5dIaDS8zARN4GHRYZ56idDR2h5CtwiKADWUCIipEBa8I-4mk4Sj2Pu6SSSb+THuBmSbLYDLEfLj4jmw2DCtzK55euXs677+sB0bmxGsC5v2NLGjaA1p12zRDsK57eriLILKtlULI0hUzJVGHfx7g4xsx86nuiA5v4tvGBpvH3lhh7Z2SBy83fivRsCMcxhm5cq+WIIe4m-I5tnC+o2NJlkcO8RUqzJkdMfpZwGCoIiABm2BK0ny9L1+zhblYMOPEbdLN2LxSVbG9w6rpksOfZSqk4T3xVngKAWtX4YDpHqAuX8+66GAtYCqdlbIaFqOIQ2oDvJXyVsgTinVPxDDgQgj+xF7Df1QfkZycV0xVASDkDQTwS62xHPbRSYDOBazsGFcyJUrJbTKJSdIup2QuGLjmTho5PZIzGMJNaz0NqvS2p3cRNh5BOF7A5KipcFFWlWgNVRQJ1Ho11MULGfxTAWE2E4dw7ggA */
-createMachine({
-  initial: "signup",
+const stateMachine =
+    /** @xstate-layout N4IgpgJg5mDOIC5SwC4EMVgHRoA661gEsoA7AV1wGIBlASQHEA5AfQFUAFRUXAe2JRFepbiAAeiALQAWAIzSsATgBsAZkUBWaQCYADAHZFegBwAaEAE9E+5VmMbFx-bOXTd93cuUBfb+dQY2HgExGSUVAwA8iz0zHRMonwCQiJI4lKq2qpY7sqy+s7uqrLy5lYIkqr62naqcrryuopu9r7+6Jg4+IQkpESkEdGxTJyJ-ESCwqISFZnZufmFxsWllhnutXKy2trGyiolbSABncE9ZP20jKzxY8lTaTOVqvN7i7JFJdJlUtrSCss5FkXNINLIqkcTkFugA3IgQMC8LAAIwATrwAO6wMBUADCACUAKIAQQAKoS7hMUtNEDtjFhlGDVMZjODlHtdBpVD8EMC7A49so9Hp9Dp9JCOtCCHCEUi0ABjFC8VGDFgANUidFxFLSSSpD1AT1kjiw0jUmnyik8e3sPI+eiwhWkhnBemNPj8x0lXWl8MROEVytVACFibiANIMfGRNhMAAilMmqUNUmN9LN6jBhmt7I0dvcCid7O0WjN7IlgR9WBl-oVSpVURYxIAMtcALKEpikxPUx6pk0Zi3Z9m5nnGIyOj4aXTuJzbZ0V06wv1ywMN6Jxwk0Al0DikuiRBK68ZJmkIeT6Bn6XSqAzbFxaDTKMfOyecmcs5x-RSLqXVlcBvWqphqSkT4j2BrpBUaamuaWZWiOtprAgmi2E6Vozpo1SyL+VY1quQE0MSao6jwJ69imvK7AyTIsmyHJcjy2iaPyjgaFyfwaNo+SqLhZz4YBypxnA8qokQuBJrQxGkSAeqnn256vso163l+D6gs+yHzjU3G6GauyyE+VrGHxy6ygG8q8OQpAoKqHDRgAYnQzYyXJFFQZI045B8xhuNILJ1Bozg8jo2RgoyLiaIoxTFKZvrmQqlnWbZjbBs5rZMAwEHJh5XkNAWekBaCwXIf5l7hdOyjuPkVX-HF-4JfKSU2XZzbEkeZH3DlTx5T5flFUFsg8qoDhYBV2j6MsI5PrxnpQnhK4htGADqNCueRkFPCW2SDvBOZIeUWTpvo7GZFazTFO49X4cBuKgeBx5dWekjbbBmaWvteZaXpWAjY4ziuO405aNdi2NmGuIxl22XPa9u0fYhX3lHUl4NIyE1TXsM2+J6pC8Ai8BpPNZyhBQuAwwpkguJe457EYciig4jHIZUWhjYy-y6NoQq0y89Wk-0FOUTIfxKHBOgGEY7g8qzGg5AYVX7E03GKNFoPmWimLYkLHmKLIOQsoo+jFDoetG0NyElroWDbPYE11PYvnMurtZroJqI6zMctcXpI3MVoxjc75SOICo9KqGo-n-GVJYeu0lb8QBdbKtWvBEPKYCe4g3t6NIfuaP5QegvmmS-ZHxuDTxLsESnaAADa9AAtmANlZwgOe+1xBeB+yxfIVaCgR3UmiZEKk04XN3qJ419YogqADWUDotZEBtx3eddwHRch+eTS2EP+n7BHwrV+7bcvTsb1DghNo78YBhvuxBZnVkp-J6iwmwKJ4nyZ1+rdYgOoCgVAA2dI4eQ0hNBjjUKaF0QobxDw0G-JqVkbJYFwOiAAZkQOumdHr-zPCUa205nSsn2IZfyN4QojRtvsME4JHBlmkMg5qKAUQ4IbqQKAbciFjT0uPchAcqGlVVrQzQM4fZ62ZHHL0CczKu1YeguuaAcpuU2ogXhJCBF6yEdyZCVR9aRS4jsGwDQrRIMnnI+KCjUEoHPqKbyBV-KAiCkxBxFUCiGFvC8Qy1dz4TUvPDYct87SKF+gKL8VQjaB25nFc+-x6QqEzBLQwJgZb-DloCdwRgdiSNwnCMAGJ4lsySQXEUUszBaSqLYXSoJjTMnBIHX88TJpi2SeUtJLMwT0iyeOIUXJoqzV8EAA */
+    createMachine({
+  id: "state",
+  type: "parallel",
   states: {
-    signup: {
-      on: {
-        SIGN_UP: {
-          target: "#app.video",
-        },
-        GO_SIGNIN: {
-          target: "#app.signin",
-        },
-      },
-    },
-    signin: {
-      on: {
-        GO_SIGNUP: {
-          target: "#app.signup",
-        },
-        SIGN_IN: {
-          target: "#app.video",
-        },
-      },
-    },
-    video: {
-      initial: "browse",
+    app: {
       states: {
-        browse: {
+        signup: {
           on: {
-            CREATE: {
-              target: "#app.video.actor",
+            SIGN_UP: {
+              target: "#state.app.video",
+            },
+            GO_SIGNIN: {
+              target: "#state.app.signin",
             },
           },
         },
-        actor: {
-          initial: "alignment",
+        signin: {
+          on: {
+            GO_SIGNUP: {
+              target: "#state.app.signup",
+            },
+            SIGN_IN: {
+              target: "#state.app.video",
+            },
+          },
+        },
+        video: {
+          initial: "browse",
           states: {
-            alignment: {},
-            background: {},
-            voice: {},
-            actor: {},
+            browse: {
+              on: {
+                CREATE: {
+                  target: "#state.app.video.actor",
+                },
+              },
+            },
+            actor: {
+              initial: "alignment",
+              states: {
+                actor: {},
+                voice: {},
+                alignment: {},
+                background: {},
+              },
+              on: {
+                GO_VOICE: {
+                  target: "#state.app.video.actor.voice",
+                },
+                GO_BACKGROUND: {
+                  target: "#state.app.video.actor.background",
+                },
+                GO_ALIGNMENT: {
+                  target: "#state.app.video.actor.alignment",
+                },
+                GO_DESCRIPTION: {
+                  target: "#state.app.video.actorDescription",
+                },
+                GO_ACTOR: {
+                  target: "#state.app.video.actor.actor",
+                },
+                SAVE: {
+                  target: "#state.app.video.browse",
+                },
+              },
+            },
+            actorDescription: {
+              on: {
+                SAVE: {
+                  target: "#state.app.video.actor",
+                },
+              },
+            },
+            account: {
+              initial: "profile",
+              states: {
+                profile: {},
+                billing: {},
+                plan: {},
+              },
+              on: {
+                GO_PROFILE: {
+                  target: "#state.app.video.account.profile",
+                },
+                GO_BILLING: {
+                  target: "#state.app.video.account.billing",
+                },
+                GO_PLAN: {
+                  target: "#state.app.video.account.plan",
+                },
+              },
+            },
           },
           on: {
-            GO_VOICE: {
-              target: "#app.video.actor.voice",
-            },
-            GO_BACKGROUND: {
-              target: "#app.video.actor.background",
-            },
-            GO_ALIGNMENT: {
-              target: "#app.video.actor.alignment",
-            },
-            GO_DESCRIPTION: {
-              target: "#app.video.actorDescription",
+            GO_BROWSE: {
+              target: "#state.app.video.browse",
             },
             GO_ACTOR: {
-              target: "#app.video.actor.actor",
+              target: "#state.app.video.actor",
             },
-            SAVE: {
-              target: "#app.video.browse",
-            },
-          },
-        },
-        actorDescription: {
-          on: {
-            SAVE: {
-              target: "#app.video.actor",
+            GO_ACCOUNT: {
+              target: "#state.app.video.account",
             },
           },
-        },
-        account: {
-          initial: "profile",
-          states: {
-            profile: {},
-            billing: {},
-            plan: {},
-          },
-          on: {
-            GO_PROFILE: {
-              target: "#app.video.account.profile",
-            },
-            GO_BILLING: {
-              target: "#app.video.account.billing",
-            },
-            GO_PLAN: {
-              target: "#app.video.account.plan",
-            },
-          },
-        },
-      },
-      on: {
-        GO_BROWSE: {
-          target: "#app.video.browse",
-        },
-        GO_ACTOR: {
-          target: "#app.video.actor",
-        },
-        GO_ACCOUNT: {
-          target: "#app.video.account",
         },
       },
     },
+    view: {},
   },
-  id: "app",
 });
