@@ -7,6 +7,7 @@ const stateMachine =
   type: "parallel",
   states: {
     app: {
+      initial: "signin",
       states: {
         signup: {
           on: {
