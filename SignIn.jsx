@@ -1,9 +1,11 @@
+import { send } from './stateSignal';
+
 export default function SignIn() {
     const onLogin = () => {
-        alert('Login');
+        send('SIGN_IN');
     }
-    const onSignUp = () => {
-        alert('SignUp');
+    const goSignUp = () => {
+        send('GO_SIGNUP');
     }
     return (
         <div>
@@ -39,7 +41,7 @@ export default function SignIn() {
                         <div className="rectangle-15-FRxjWz" data-id="96:61">
                         </div><div className="password-FRxjWz" data-id="96:62">Password</div>
                         <div className="forgot-FRxjWz" data-id="96:64">Forgot?</div>
-                        <a onClick={onSignUp}><div className="new-here-signup-FRxjWz" data-id="145:0"><span className="span0-ZHYFQx">New here?</span><span className="span1-ZHYFQx"> Signup</span></div>
+                        <a onClick={goSignUp}><div className="new-here-signup-FRxjWz" data-id="145:0"><span className="span0-ZHYFQx">New here?</span><span className="span1-ZHYFQx"> Signup</span></div>
                         </a><div className="enter-your-password-FRxjWz" data-id="96:63">Enter your password</div>
                     </div>
                 </div>
