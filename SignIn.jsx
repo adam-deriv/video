@@ -36,7 +36,7 @@ export default function SignIn() {
                     <div className="group-10-u6Fixy" data-id="96:59">
                         <div className="rectangle-15-FRBKJL" data-id="96:56">
                         </div><div className="email-address-FRBKJL" data-id="96:57">Email address</div>
-                        <div className="x13bala90gmailcom-FRBKJL" data-id="96:58">13bala90@gmail.com</div>
+                        <div className="enter-your-password-FRxjWz" data-id="96:58">Enter your email</div>
                     </div>
                     <div className="group-11-u6Fixy" data-id="96:60">
                         <div className="rectangle-15-FRxjWz" data-id="96:61">
