@@ -1,14 +1,17 @@
 // create react component for SignUp
 // import React, { useState } from 'react'
 
-export default function SignUp() {
+export default function SignIn() {
+    const onLogin = () => {
+        alert('Login');
+    }
     return (
         <div>
             <input type="hidden" id="anPageName" name="page" defaultValue="createvideosignin" />
             <div className="container-center-horizontal">
                 <div className="createvideosignin screen " data-id="96:17"><img className="line-1-u6Fixy anima-loading-result" data-id="96:18" src="data:image/svg+xml;base64, PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSI4MjAiIHZpZXdCb3g9IjAgMCAxIDgyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgb3BhY2l0eT0iMC4xIiB4MT0iMC41IiB4Mj0iMC41IiB5Mj0iODIwIiBzdHJva2U9ImJsYWNrIi8+Cjwvc3ZnPgo=" style={{ visibility: 'visible', height: 0, width: 820, top: 39, left: '101.5px' }} />
                     <div className="sign-in-u6Fixy" data-id="96:25">Sign In</div>
-                    <a href="anima://page/0:3">
+                    <a onClick={onLogin}>
                         <div className="button-u6Fixy" data-id="96:26"><div className="login-x55FzC" data-id="96:27">Login</div>
                         </div></a>
                     <div className="group-2-u6Fixy" data-id="96:28">
