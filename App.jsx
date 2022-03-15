@@ -1,9 +1,12 @@
+import { lazy, Suspense } from "react";
 import './App.scss'
-import SignUp from './SignUp';
 
+const SignUp = lazy(async() => import('./SignUp'));
 function App() {
   return (
-    <SignUp />
+    <Suspense fallback={<div>Loading...</div>}>
+      <SignUp />
+    </Suspense>
   )
 }
 
