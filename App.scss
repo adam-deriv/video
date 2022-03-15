@@ -1063,3 +1063,19 @@ input:focus {
   top: 39px;
   width: auto;
 }
+
+.signin {
+  display: none;
+}
+
+[data-state~="app.signin"] .signin {
+  display: block;
+}
+
+.signup {
+  display: none;
+}
+
+[data-state~="app.signup"] .signup {
+  display: block;
+}
