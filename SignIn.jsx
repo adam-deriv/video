@@ -1,6 +1,3 @@
-// create react component for SignUp
-// import React, { useState } from 'react'
-
 export default function SignIn() {
     const onLogin = () => {
         alert('Login');
