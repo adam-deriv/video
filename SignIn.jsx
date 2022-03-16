@@ -26,15 +26,17 @@ export default function SignIn() {
                     </div>
                     <div className="group-10-u6Fixy" data-id="96:59">
                         <div className="rectangle-15-FRBKJL" data-id="96:56">
+                            <input data-id="96:58" placeholder="Enter your email"></input>
                         </div><div className="email-address-FRBKJL" data-id="96:57">Email address</div>
-                        <div className="enter-your-password-FRxjWz" data-id="96:58">Enter your email</div>
                     </div>
                     <div className="group-11-u6Fixy" data-id="96:60">
                         <div className="rectangle-15-FRxjWz" data-id="96:61">
+                                                    {/* add input with Enter your password placeholder */}
+                        <input type="password" placeholder="Enter your password" />
                         </div><div className="password-FRxjWz" data-id="96:62">Password</div>
                         <div className="forgot-FRxjWz" data-id="96:64">Forgot?</div>
                         <a><div className="new-here-signup-FRxjWz" data-id="145:0"><span className="span0-ZHYFQx">New here?</span><span className="span1-ZHYFQx"> Signup</span></div>
-                        </a><div className="enter-your-password-FRxjWz" data-id="96:63">Enter your password</div>
+                        </a>
                     </div>
                 </div>
             </div>

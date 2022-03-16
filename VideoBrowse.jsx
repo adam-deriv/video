@@ -1,6 +1,6 @@
 export default function VideoBrowse() {
     return (
-        <div>
+        <div className="videobrowse">
             <input type="hidden" id="anPageName" name="page" defaultValue="createvideobrowse" />
             <div className="container-center-horizontal">
                 <div className="createvideobrowse screen " data-id="92:0"><img className="line-1-YVHDXl anima-loading-result" data-id="92:1" src="data:image/svg+xml;base64, PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSI4MjAiIHZpZXdCb3g9IjAgMCAxIDgyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgb3BhY2l0eT0iMC4xIiB4MT0iMC41IiB4Mj0iMC41IiB5Mj0iODIwIiBzdHJva2U9ImJsYWNrIi8+Cjwvc3ZnPgo=" style={{ visibility: 'visible', height: 0, width: 820, top: 39, left: '101.5px' }} />
