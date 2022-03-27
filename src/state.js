@@ -122,6 +122,39 @@ export const stateMachine =
         },
       },
     },
-    view: {},
+    responsive: {
+      states: {
+        desktopLaptopL: {},
+        desktopLaptopM: {},
+        desktop4k: {},
+        mobileL: {},
+        mobileM: {},
+        mobileS: {},
+        mobileTablet: {},
+      },
+      on: {
+        GO_LAPTOP_L: {
+          target: "#state.responsive.desktopLaptopL",
+        },
+        GO_LAPTOP: {
+          target: "#state.responsive.desktopLaptopM",
+        },
+        GO_SCREEN4K: {
+          target: "#state.responsive.desktop4k",
+        },
+        GO_MOBILE_L: {
+          target: "#state.responsive.mobileL",
+        },
+        GO_MOBILE_M: {
+          target: "#state.responsive.mobileM",
+        },
+        GO_MOBILE_S: {
+          target: "#state.responsive.mobileS",
+        },
+        GO_TABLET: {
+          target: "#state.responsive.mobileTablet",
+        },
+      },
+    }
   },
 });

@@ -1,4 +1,5 @@
 import { createSignal, onCleanup, createEffect } from 'solid-js';
+import { useEffect, useState } from 'react';
 import { interpret } from 'xstate';
 import { stateMachine } from './state';
 
@@ -46,30 +47,31 @@ const screenSizesEnum = {
     },
 };
 const checkWidth = () => {
-    if (window.innerWidth >= screenSizesEnum.screen4k.width) {
+    if (window.outerWidth >= screenSizesEnum.screen4k.width) {
         setWindowWidth(screenSizesEnum.screen4k.name);
     }
-    if (window.innerWidth >= screenSizesEnum.laptopL.width && window.innerWidth < screenSizesEnum.screen4k.width) {
+    if (window.outerWidth >= screenSizesEnum.laptopL.width && window.outerWidth < screenSizesEnum.screen4k.width) {
         setWindowWidth(screenSizesEnum.laptopL.name);
     }
-    if (window.innerWidth >= screenSizesEnum.laptop.width && window.innerWidth < screenSizesEnum.laptopL.width) {
+    if (window.outerWidth >= screenSizesEnum.laptop.width && window.outerWidth < screenSizesEnum.laptopL.width) {
         setWindowWidth(screenSizesEnum.laptop.name);
     }
-    if (window.innerWidth >= screenSizesEnum.tablet.width && window.innerWidth < screenSizesEnum.laptop.width) {
+    if (window.outerWidth >= screenSizesEnum.tablet.width && window.outerWidth < screenSizesEnum.laptop.width) {
         setWindowWidth(screenSizesEnum.tablet.name);
     }
-    if (window.innerWidth >= screenSizesEnum.mobileL.width && window.innerWidth < screenSizesEnum.tablet.width) {
+    if (window.outerWidth >= screenSizesEnum.mobileL.width && window.outerWidth < screenSizesEnum.tablet.width) {
         setWindowWidth(screenSizesEnum.mobileL.name);
     }
-    if (window.innerWidth >= screenSizesEnum.mobileM.width && window.innerWidth < screenSizesEnum.mobileL.width) {
+    if (window.outerWidth >= screenSizesEnum.mobileM.width && window.outerWidth < screenSizesEnum.mobileL.width) {
         setWindowWidth(screenSizesEnum.mobileM.name);
     }
-    if (window.innerWidth >= screenSizesEnum.mobileS.width && window.innerWidth < screenSizesEnum.mobileM.width) {
+    if (window.outerWidth >= screenSizesEnum.mobileS.width && window.outerWidth < screenSizesEnum.mobileM.width) {
         setWindowWidth(screenSizesEnum.mobileS.name);
     }
 };
 createEffect(
     () => {
+        console.log('windowWidth() ',window.outerWidth)
         if (windowWidth() === screenSizesEnum.screen4k.name) {
             send("GO_SCREEN4K");
         }

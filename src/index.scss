@@ -1692,3 +1692,12 @@ input:focus {
 .videobrowse {
     display: none;
 }
+
+.inputContainter {
+    display: flex;
+}
+
+.inputComponent {
+  border-color: transparent;
+  margin-left: 10px;
+}
