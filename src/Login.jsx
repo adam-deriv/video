@@ -1,4 +1,5 @@
 import { appSerivce } from "./appService";
+import Input from "./components/Input";
 
 export default function Login() {
   return (
@@ -6,21 +7,13 @@ export default function Login() {
       <div className="topBar"><div className="topTitle">Sign In</div></div>
       <div className="mainContent">
         <div className="formWrapper1">
-          <div className="inputWrapper">
-            <div className="inputTitleBar">
-              <div className="inputTitle">Email address</div>
-            </div>
-            <input className="inputApp" placeholder="Enter your email"></input>
-          </div>
+          <Input title="Email address" placeholder="Enter your email" />
         </div>
         <div className="formWrapper2">
-          <div className="inputWrapper">
-            <div className="inputTitleBar">
-              <div className="inputTitle">Password</div>
-              <div className="interactiveText">Forgot?</div>
-            </div>
-            <input className="inputApp" type="password" placeholder="Enter your password"></input>
-          </div>
+          <Input
+            title="Password"
+            placeholder="Enter your password"
+            label={<div className="interactiveText">Forgot?</div>} />
         </div>
         <div className="formWrapper3">
           <button className="buttonApp">Login</button>

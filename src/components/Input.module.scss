@@ -1,0 +1,55 @@
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inputApp {
+    width: 230px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    height: 40px;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 8px 15px;
+  }
+  
+  [data-responsive*="desktop"] .inputApp {
+    width: 360px;
+  }
+  
+  .inputTitleBar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .inputTitle {
+    color: var(--text-02);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+  
+  }
+
+  ::placeholder {
+    color: var(--placeholder);
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
