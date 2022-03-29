@@ -12,7 +12,7 @@ const isLoginValid = (_, event) => {
 }
 
 export const appMachine =
-    /** @xstate-layout N4IgpgJg5mDOIC5QEMAOqB0sCWUB2ArqgMQDKAkgOIByA+gKoAKioqA9jgC7Zt4sgAPRAGYALAA4MAVmEBOAEzDFARilqpAdgA0IAJ6JlABlEYAbIfHHRGjeOXXDUgL5OdaTDnxFilAPK0KGnJqfnYuHj4kQQNhZQwNYXF5KUME+VF5ZXFxHX0EWUlxWVTlRNE1eQLTFzd0LFw8bDwff0DqJlCObG5efiEEUriEpJS0jKycvQNRUwwiw1NsjQzhcxsakHd6-CayKjpgzvDeqP7lTPjE5NSlcezcg1kTedNTVbllWWVTDQ2tgDdsBAwGwMAAjABObAA7rAwMQAMIAJQAogBBAAqKKO3QifUQsli8XE1hS30JilEDwQyTi5ksSnk8lMUlMyT+dUBwNByAAxpw2BCWrQAGq+cgI7FRMK4k6gfpSUSyDCGOSKJSyTWE7RTfJPFXiKTKDQsyoZSoczBckEYPkCoV+WgAITRCIA0pQkb56NQACI4nqReWIRXK1UKYQarXCHV5IqSCxSJk-YSaUzKZSWjDWnn8wXCtEAGX2AFkUdQMQG8acQ0qVWrI5Vo7GCTMDUnDN8lFIFFmc7a8w7-L6UaRkeRGBjyL4QtKuoH8QhxGyMKIZj3u2VI9TLFJ27TxIlCYZ5H2gTa7fnHa6Mb4kVW5dEEKH6xGo5qYzuUvujYeisITzPbkB3tMg0RFKVWHnatg3yIlbFJTtTApMRqSbMwLEMEp1UJUQgIvQdfTgXkIWwVBAzAiCHyDJ9l3kVd1wpGQSW3XUM1EYRpENLtZBsP88NcTZOXPXNeTYAg8E4YVGC9AAxchC0gkAZQXGsEEWOIlUUI1inYn5qVEIwMHkOwAKPDQClSapBIBESBzEiSpMdJ0FOLahKGoxcNNXCMdM7ex9N1cpJBM85bAsiQMx+fDRPEyTpMLNFZyg44aP6bytNTT5-JmFsEFWejQo1LD2KqGLhSdL0AHVSCUlSYKfJUTHDdUmw-PLkg0DBNzeVQvgs34bOE7kCwRW97znVLFya19Wq1bVqVKeijEsNc+PsDRHHK68EQRb0K08tSZpaxt5s-XUxGVWwluKHKyo2PA2GBeAoi2TxCFQQ7YPkTaMAUTQYzXa57jYozZFZcMMnEDQjCeLN3qaL7GvkRajIWBwJHBztweEGLwShWEwCR9LREMVd7CZJVGU2jq3jMBJU1sQxeI46zaitOzLwhEDBWJxAEi6k9UyKIwxCTPLDVmDjblMTGmszIaOeArnszYbBeSJybZTS-mYxVbSRdVcofsWrCyel40MwsqpZDxlXkAAGwaABbMBJL5hABf14WviN8XqXB+iLdkNlD1UHs7cHcE+QAaygKEJIgD2vaFqRDbFk3dWKExpaZUpl1uW3FezTnBw9pM9xO98Ft1E1K8NTJCSTax00j+0iNgEiyNUlLtcXIwOPiDjrBh0pbBkHd7DMFJNGWPOM1x4v+z5BzJIwVAoQAM2wB3Nd7nvaOZFVUiqZJI1SSY8kM2Y2QUApFUNNc2aEpWCNXzhwR3p28CgD2klmLCFk6IyAArYAysszCVB+mIcoMZWSR3fuvB2yAaL1UfP0f+x8gFshARfakqxJC3yUKsI0MNEgILipwD2LIuqZT8npDqNhjJ2EqCyAK4NBrsxLtyD2DhZqnWbAZLqK1OxMi+MhSo3xLQeyyNSAAtMkOYXxwbLhTIaEOAkXBAA */
+    /** @xstate-layout N4IgpgJg5mDOIC5QEMAOqB0sCWUB2ArqgMQDKAkgOIByA+gKoAKioqA9jgC7Zt4sgAPRAFoAjAAZRGAJwBmaQCYAbOKVKA7LPXiFAGhABPEVvEz16xbIXyALLNGiAvo-1pMOfEWKUA8rQAyPpTk1PzsXDx8SILGogAcGOo2OjYKCgCs4pk2+kYIwlpKGErS6RmK6XH2orLOrugYADZsUNh43n4UNExhHNjcvPxC+fYJSSlpmdm5xgoJJWVxdkqiNnHiNnUgbk0tbWRUdCG9EYPRwwVzickKqRlZGzP5c6YLsuLSNkpfNqVbOwA3bAQMBsDAAIwATmwAO6wMDEADCACUAKIAQQAKqiTv1IkNEGspO9vhJ1JV1Mo9IYRGlZGYLLJ0hYJKJ0koFP8GkCQWDkABjThsSEdWgANR85EROOi4TxZ1Aw2kCXZ4nG9m0GiqT3S8QwvzkuukDm+SS5mB5oIwAqFIt8tAAQujEQBpSjInz0agAEVxAyiisQyowqvVok16m1NIQd310k+OgcFjizPNGEtfMFwtF6P8hwAsqjqJi-fjzkGVSowxGo3kbNo43I2WskjYammM9as3a-N7UaQUeRGJjyD5QrK+v6CTGHDIlOtxHFJtJvk8rNJG7IlOy5OY-i5ttzgVabdn7c7MT5kaWFTEEMHQ8kNapI7I10lN9uSloLOkO8fM1tMh0TFGVWEnMtAxjOJiVUNs1QpKknjEckGTieMt3nD5Un-Xku1tb04H5SFsFQf1gNAm8AzvNspBXBcl3KVdozUdQZAw7RRGsckNlwk9+X5NgCDwThRUYD0ADFyH8MCQDlKdywQawpEkeQFA2Gx0nSFdRGQ7cMHeesHi0mCPjiPjM0E4TRPtB1pLzahKCo6dlIwVTFA0rSdOQ8MDI2NQ4iUewVHrJYLK7KyRLE-x0XHcDTmo4ZXPc9SbE07SVh8mo-K+eJUjKNRtws0UHQ9AB1UhZPkyCaPpR9xGfLUMmQhQ9WULJZCXNL1BUVZivPRFL2vCcEunOwQyrJ9wxfJd0mQ2RxvrX9kgahw4nUfq-GdRFPWLZzFPG+rGsjZrozEDIMHWXKlgyZQ1D-LY8DYEF4GiHYPEIVB9qglCNy0hRyS05I220OJ5u+YoFHjOwlh69kMjTZpWmo6rbwuZJ0jcsplSC40uOkcHMbKLj53UuIl1EIqD0BACIWhOEwG+u94g3Q1GXrDR1MplrZ2NDJ0JWViofC09IXw4UmaSwKQ00hrNKbXU5ujTrTFh5IgoCrmRe7dM2GwflGZG+VEsQOYinSWWFu0+xFZ1W5LvrLd1I0CRlW121rUaXA8AAWzAETJdN6WLcyK2FbZJ4OYdzQMm+KGGvM6mjzw0WIQFABrKBoWEiBA6U4PLflm2I+jVIElhpk1S+NU5lqJOLVp0W84-I7pq1N9ozmDcDVkXv1Jj9I6-qBuU+7QjYGI0iFPi43p2tjBlDWDyU2kVQ13kNzTSsVqNVSTZ6-TRuBKEkSMFQaEADNsEaQ2Z+nu8tCJqHBasXUrE05DKhkdkSl+cQ5ZTE4A+nYBSRU4BCa+Xs8BQDzo-EMz9KavxqLcJWeQxCmFKPdWGKxUiYW1mAs+jRkAowgmjRAcDsYvwyMgj+Z0JBFEwWoaQFh1Dhk+JyYBR8wF537m5GoHk0peUynQ4MhltwfCTP3ROw9D68jzqIP6k1Vo1lOmgsu+o9yBSXsyM25o87CFSBuLIUNAryAcFDT+kgNG-lbIFXU5JnDOCAA */
     createMachine({
   id: "app",
   initial: "login",
@@ -37,9 +37,7 @@ export const appMachine =
             cond: isLoginValid,
             target: "video",
           },
-          {
-            internal: false,
-          },
+          {},
         ],
       },
     },
@@ -64,22 +62,18 @@ export const appMachine =
           on: {
             GO_VOICE: {
               target: ".voice",
-              internal: false,
             },
             GO_BACKGROUND: {
               target: ".background",
-              internal: false,
             },
             GO_ALIGNMENT: {
               target: ".alignment",
-              internal: false,
             },
             GO_DESCRIPTION: {
               target: "actorDescription",
             },
             GO_ACTOR: {
               target: ".actor",
-              internal: false,
             },
             SAVE: {
               target: "browse",
@@ -103,15 +97,12 @@ export const appMachine =
           on: {
             GO_PROFILE: {
               target: ".profile",
-              internal: false,
             },
             GO_BILLING: {
               target: ".billing",
-              internal: false,
             },
             GO_PLAN: {
               target: ".plan",
-              internal: false,
             },
           },
         },
@@ -119,15 +110,12 @@ export const appMachine =
       on: {
         GO_BROWSE: {
           target: ".browse",
-          internal: false,
         },
         GO_ACTOR: {
           target: ".actor",
-          internal: false,
         },
         GO_ACCOUNT: {
           target: ".account",
-          internal: false,
         },
       },
     },
