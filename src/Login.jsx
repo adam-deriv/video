@@ -1,3 +1,5 @@
+import { appSerivce } from "./appService";
+
 export default function Login() {
   return (
     <div className="mainWrapper">
@@ -25,7 +27,7 @@ export default function Login() {
         </div>
         <div className="signupWrapper">
           <div className="signupTitle">New here?&nbsp;</div>
-          <div className="interactiveText">Signup</div>
+          <div className="interactiveText" onClick={() => appSerivce.send('GO_SIGNUP')}>Signup</div>
         </div>
       </div>
     </div>
