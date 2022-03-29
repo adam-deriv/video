@@ -1,3 +1,5 @@
+import { appSerivce } from "./appService";
+
 export default function SignUp() {
     return (
         <div className="signup">
@@ -37,7 +39,7 @@ export default function SignUp() {
                         <div className="rectangle-15-GM9hxh" data-id="146:18">
                         </div><div className="new-password-GM9hxh poppins-normal-black-14px" data-id="146:19">New Password</div>
                         <div className="strong-GM9hxh" data-id="146:27">Strong</div>
-                        <a><div className="already-user-login-GM9hxh" data-id="146:21"><span className="span0-BGnfVp">Already user?</span><span className="span1-BGnfVp"> Login</span></div>
+                        <a><div className="already-user-login-GM9hxh" data-id="146:21"><span className="span0-BGnfVp">Already user?</span><span onClick={() => appSerivce.send('GO_LOGIN')} className="span1-BGnfVp"> Login</span></div>
                         </a><div className="x-GM9hxh poppins-medium-mine-shaft-15px" data-id="146:22">****************</div>
                     </div>
                 </div>

@@ -22,7 +22,7 @@ export const appMachine =
         SIGN_UP: {
           target: "video",
         },
-        GO_login: {
+        GO_LOGIN: {
           target: "login",
         },
       },
