@@ -1064,22 +1064,6 @@ input:focus {
   width: auto;
 }
 
-.signin {
-  display: none;
-}
-
-[data-state~="app.signin"] .signin {
-  display: block;
-}
-
-.signup {
-  display: none;
-}
-
-[data-state~="app.signup"] .signup {
-  display: block;
-}
-
 @import url("https://fonts.googleapis.com/css?family=Poppins:500,600|Roboto:400");
 
 .screen textarea:focus,
@@ -1687,10 +1671,6 @@ input:focus {
   text-align: left;
   top: 3px;
   width: auto;
-}
-
-.videobrowse {
-    display: none;
 }
 
 .inputContainter {

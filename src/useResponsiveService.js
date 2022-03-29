@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { send } from './stateSignal';
+import { responsiveSerivce } from './responsiveService';
 
 const screenSizesEnum = {
     screen4k: {
@@ -25,28 +25,28 @@ const screenSizesEnum = {
     },
 };
 
-export const useResizeEffect = () => {
+export const useResponsiveService = () => {
     const checkWidth = () => {
         if (window.outerWidth >= screenSizesEnum.screen4k.width) {
-            send("GO_SCREEN4K");
+            responsiveSerivce.send("GO_SCREEN4K");
         }
         if (window.outerWidth >= screenSizesEnum.laptopL.width && window.outerWidth < screenSizesEnum.screen4k.width) {
-            send("GO_LAPTOP_L");
+            responsiveSerivce.send("GO_LAPTOP_L");
         }
         if (window.outerWidth >= screenSizesEnum.laptop.width && window.outerWidth < screenSizesEnum.laptopL.width) {
-            send("GO_LAPTOP");
+            responsiveSerivce.send("GO_LAPTOP");
         }
         if (window.outerWidth >= screenSizesEnum.tablet.width && window.outerWidth < screenSizesEnum.laptop.width) {
-            send("GO_TABLET");
+            responsiveSerivce.send("GO_TABLET");
         }
         if (window.outerWidth >= screenSizesEnum.mobileL.width && window.outerWidth < screenSizesEnum.tablet.width) {
-            send("GO_MOBILE_L");
+            responsiveSerivce.send("GO_MOBILE_L");
         }
         if (window.outerWidth >= screenSizesEnum.mobileM.width && window.outerWidth < screenSizesEnum.mobileL.width) {
-            send("GO_MOBILE_M");
+            responsiveSerivce.send("GO_MOBILE_M");
         }
         if (window.outerWidth >= screenSizesEnum.mobileS.width && window.outerWidth < screenSizesEnum.mobileM.width) {
-            send("GO_MOBILE_S");
+            responsiveSerivce.send("GO_MOBILE_S");
         }
     };
     useEffect(() => {
