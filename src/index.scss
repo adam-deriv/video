@@ -92,6 +92,18 @@ body {
   line-height: 20px;
 }
 
+.strongLabel {
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--primary-01);
+  padding-right: 2px;
+}
+
 .topBar {
   width: 100%;
 }

@@ -17,6 +17,7 @@ export default function Login() {
             title="New Password"
             placeholder="Enter new password"
             type="password"
+            label={<div className="strongLabel">Strong</div>}
           />
         </div>
         <div className="formWrapper3">

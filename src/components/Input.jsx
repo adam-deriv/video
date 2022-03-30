@@ -1,14 +1,14 @@
 import { useRef } from 'react';
 import styles from './Input.module.scss';
 
-export default function Input({ title, placeholder, onChange, value, type, LabelComponent }) {
+export default function Input({ title, placeholder, onChange, value, type, label }) {
     const inputRef = useRef();
     console.dir(inputRef.current);
     return (
         <div className={styles.inputWrapper}>
             <div className={styles.inputTitleBar}>
                 <div className={styles.inputTitle}>{title}</div>
-                {LabelComponent && <LabelComponent value={inputRef.current.value} />}
+                {label && label}
             </div>
             <input
                 ref={inputRef}
