@@ -12,7 +12,6 @@ export default function Input({ title, placeholder, onChange, value, type, Label
             </div>
             <input
                 ref={inputRef}
-                className={styles.inputApp}
                 placeholder={placeholder}
                 onChange={onChange}
                 value={value}
