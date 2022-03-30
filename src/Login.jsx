@@ -7,13 +7,17 @@ export default function Login() {
       <div className="topBar"><div className="topTitle">Sign In</div></div>
       <div className="mainContent">
         <div className="formWrapper1">
-          <Input title="Email address" placeholder="Enter your email" />
+          <Input 
+            title="Email address" 
+            placeholder="Enter your email" 
+          />
         </div>
         <div className="formWrapper2">
           <Input
             title="Password"
+            type="password"
             placeholder="Enter your password"
-            label={<div className="interactiveText">Forgot?</div>} />
+          />
         </div>
         <div className="formWrapper3">
           <button className="buttonApp">Login</button>

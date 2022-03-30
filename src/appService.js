@@ -1,5 +1,5 @@
 import { createMachine, interpret } from 'xstate';
-import { createEffect } from 'solid-js';
+import { useEffect } from 'react';
 
 // write login valid guard
 
@@ -122,11 +122,15 @@ export const appMachine =
   },
 });
 
-
-export const appSerivce = interpret(appMachine).onTransition(currentState => {
-  createEffect(() => {
+export const useAppService = () => {
+  useEffect(() => {
+    appSerivce.onTransition(currentState => {
       const joinedState = currentState.toStrings().join(' ');
       const app = document && document.querySelector("#app");
       app && app.setAttribute("data-app", joinedState);
-  });
-}).start();
+    }).start();
+  }, []);
+};
+
+
+export const appSerivce = interpret(appMachine);

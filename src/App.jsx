@@ -2,7 +2,7 @@ import { Suspense, lazy } from 'react';
 import { useSelector } from '@xstate/react';
 import { useResponsiveService } from './useResponsiveService';
 import './index.scss';
-import { appSerivce } from './appService';
+import { appSerivce, useAppService } from './appService';
 import Loading from './components/Loading';
 
 export const isLoginSelector = (state) => state.matches('login');
@@ -13,6 +13,7 @@ const SignUp = lazy(() => import('./SignUp'));
 
 function LazyApp() {
   useResponsiveService();
+  useAppService();
   const isLogin = useSelector(appSerivce, isLoginSelector);
   const isSignup = useSelector(appSerivce, isSignupSelector);
   if (isLogin) return (
