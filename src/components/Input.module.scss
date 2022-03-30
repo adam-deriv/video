@@ -5,7 +5,7 @@
     align-items: center;
   }
   
-  .inputApp {
+  input {
     width: 230px;
     border-radius: 6px;
     border: 1px solid var(--border);
@@ -18,6 +18,10 @@
     letter-spacing: 0em;
     text-align: left;
     padding: 8px 15px;
+  }
+  input:focus {
+    outline: none;
+    border: 1px solid var(--focused);
   }
   
   [data-responsive*="desktop"] .inputApp {

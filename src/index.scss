@@ -8,7 +8,8 @@
   --text-interactive: #3860AD;
   --text-button: #FFFFFF;
   --border: #999999;
-  --placeholder: #CCCCCC
+  --placeholder: #CCCCCC;
+  --focused: #5C90F3;
 }
 
 body {
@@ -35,8 +36,10 @@ body {
 }
 
 .formWrapper1 {
-  margin-top: 163px;
   margin-bottom: 20px;
+}
+[data-responsive*='desktop'] .formWrapper1 {
+  margin-top: 163px;
 }
 
 .formWrapper2 {
@@ -50,7 +53,6 @@ body {
 .mainWrapper {
   width: 100%;
   height: 100%;
-  // add background image from /img/background_graphic.svg
   background-image: url("/img/background_graphic.svg");
   background-repeat: no-repeat;
   background-position: top right;
