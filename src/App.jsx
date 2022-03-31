@@ -30,6 +30,13 @@ function LazyApp() {
 function App() {
   return (
     <div id="app" className="app">
+      {/* add sidebar */}
+      <div className="sidebar">
+        <div className="sidbarAppLogo" />
+        <div className="sidebarAppBrowse" />
+        <div className="sidebarAppCreate" />
+        <div className="sidebarAppProfile" />
+      </div>
       <LazyApp />
     </div>
   );
