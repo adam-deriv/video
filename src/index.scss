@@ -153,6 +153,9 @@ body {
   font-weight: 500;
   color: var(--text-01);
   line-height: 33px;
+}
+
+[data-responsive*="desktop"] .topBarTitle {
   padding: 35px;
 }
 

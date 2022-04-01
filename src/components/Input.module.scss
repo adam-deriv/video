@@ -23,6 +23,12 @@
     outline: none;
     border: 1px solid var(--focused);
   }
+
+  [data-responsive*="mobileS"] {
+    input {
+      width: 175px;
+    }
+  }
   
   [data-responsive*="desktop"] .inputApp {
     width: 360px;
