@@ -3,13 +3,14 @@ import { QueryClient, QueryClientProvider } from 'react-query'
 import { useSelector } from '@xstate/react';
 import { useResponsiveService } from './useResponsiveService';
 import './index.scss';
-import { appSerivce, useAppService } from './appService';
+import { appService, useAppService } from './appService';
 import Loading from './components/Loading';
 import { useSignIn } from './useSignIn';
 
 export const isLoginSelector = (state) => state.matches('login');
 export const isSignupSelector = (state) => state.matches('signup');
 export const isSigningSelector = (state) => state.matches('signing');
+export const isCheckingSelector = (state) => state.matches('checking');
 
 const SignIn = lazy(() => import('./Login'));
 const SignUp = lazy(() => import('./SignUp'));
@@ -20,9 +21,10 @@ function LazyApp() {
   useResponsiveService();
   useAppService();
   useSignIn();
-  const isLogin = useSelector(appSerivce, isLoginSelector);
-  const isSignup = useSelector(appSerivce, isSignupSelector);
-  if (isLogin) return (
+  const isLogin = useSelector(appService, isLoginSelector);
+  const isSignup = useSelector(appService, isSignupSelector);
+  const isChecking = useSelector(appService, isCheckingSelector);
+  if (isLogin || isChecking) return (
       <Suspense fallback={<Loading />}><SignIn /></Suspense>
   )
   if (isSignup) return (

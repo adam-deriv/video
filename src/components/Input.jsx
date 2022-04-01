@@ -3,7 +3,6 @@ import styles from './Input.module.scss';
 
 export default function Input({ title, placeholder, onChange, value, type, label }) {
     const inputRef = useRef();
-    console.dir(inputRef.current);
     return (
         <div className={styles.inputWrapper}>
             <div className={styles.inputTitleBar}>

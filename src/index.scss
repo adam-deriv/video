@@ -154,6 +154,11 @@ body {
   text-align: left;
   color: var(--primary-01);
   padding-right: 2px;
+  display: none;
+}
+
+[data-app~="signup.strongPassword"] .strongLabel {
+  display: block;
 }
 
 .topBar {

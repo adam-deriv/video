@@ -1,7 +1,12 @@
-import { appSerivce } from "./appService";
+import { createSignal } from "solid-js";
+import { appService } from "./appService";
 import Input from "./components/Input";
+import { useCheckStrong } from "./useCheckStrong";
+
+export const [newPassword, setNewPassword] = createSignal("");
 
 export default function Login() {
+  useCheckStrong();
   return (
     <div className="mainWrapper">
       <div className="topBar"><div className="topTitle">Create an account</div></div>
@@ -17,6 +22,7 @@ export default function Login() {
             title="New Password"
             placeholder="Enter new password"
             type="password"
+            onChange={(e) => setNewPassword(e.target.value)}
             label={<div className="strongLabel">Strong</div>}
           />
         </div>
@@ -25,7 +31,7 @@ export default function Login() {
         </div>
         <div className="signupWrapper">
           <div className="signupTitle">Already user?&nbsp;</div>
-          <div className="interactiveText" onClick={() => appSerivce.send('GO_LOGIN')}>Login</div>
+          <div className="interactiveText" onClick={() => appService.send('GO_LOGIN')}>Login</div>
         </div>
       </div>
     </div>

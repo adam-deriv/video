@@ -1,7 +1,12 @@
-import { appSerivce } from "./appService";
+import { createSignal } from "solid-js";
+import { appService } from "./appService";
 import Input from "./components/Input";
+import { useCheckPassword } from "./useCheckPassword";
+
+export const [loginPassword, setLoginPassword] = createSignal("");
 
 export default function Login() {
+  useCheckPassword();
   return (
     <div className="mainWrapper">
       <div className="topBar"><div className="topTitle">Sign In</div></div>
@@ -17,14 +22,15 @@ export default function Login() {
             title="Password"
             type="password"
             placeholder="Enter your password"
+            onChange={(e) => setLoginPassword(e.target.value)}
           />
         </div>
         <div className="formWrapper3">
-          <button className="buttonApp" onClick={() => appSerivce.send('SIGN_IN')}>Login</button>
+          <button className="buttonApp" onClick={() => appService.send('CHECK_PASSWORD')}>Login</button>
         </div>
         <div className="signupWrapper">
           <div className="signupTitle">New here?&nbsp;</div>
-          <div className="interactiveText" onClick={() => appSerivce.send('GO_SIGNUP')}>Signup</div>
+          <div className="interactiveText" onClick={() => appService.send('GO_SIGNUP')}>Signup</div>
         </div>
       </div>
     </div>
