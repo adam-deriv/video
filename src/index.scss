@@ -18,6 +18,14 @@ body {
   padding: 0;
 }
 
+// add backgrond mixin
+@mixin backgroundGraphic{
+  background-image: url("/img/background_graphic.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 200px;
+}
+
 .app {
   height: 100vh;
   width: 100vw;
@@ -42,6 +50,13 @@ body {
   margin-bottom: 20px;
 }
 
+[data-app~="login"], [data-app~="signup"] {
+  .mainWrapper {
+    @include backgroundGraphic;
+  }
+} 
+
+
 [data-responsive*='desktop'] [data-app~='login'],
 [data-responsive*='desktop'] [data-app~='checking'] {
   .formWrapper1 {
@@ -64,10 +79,6 @@ body {
 .mainWrapper {
   width: 100%;
   height: 100%;
-  background-image: url("/img/background_graphic.svg");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 200px;
 }
 
 [data-responsive*="desktop"] .mainWrapper {
@@ -121,18 +132,30 @@ body {
 }
 
 .topBar {
-  width: 100%;
+  width: calc(100% - 60px);
+  height: 104px;
+  margin: 0px 30px;
+}
+
+[data-app~="video"] .topBar {
+  border-bottom: 1px solid var(--sidebar-border);
 }
 
 .topBar {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.topTitle {
+.topBarTitle {
   font-family: "Poppins", sans-serif;
   font-size: 22px;
   font-weight: 500;
   color: var(--text-01);
   line-height: 33px;
   padding: 35px;
+}
+
+.topBarRight {
+  margin-right: 40px;
 }

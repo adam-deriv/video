@@ -9,7 +9,7 @@ export default function Login() {
   useCheckPassword();
   return (
     <div className="mainWrapper">
-      <div className="topBar"><div className="topTitle">Sign In</div></div>
+      <div className="topBar"><div className="topBarTitle">Sign In</div></div>
       <div className="mainContent">
         <div className="formWrapper1">
           <Input 

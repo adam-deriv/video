@@ -9,7 +9,7 @@ export default function Login() {
   useCheckStrong();
   return (
     <div className="mainWrapper">
-      <div className="topBar"><div className="topTitle">Create an account</div></div>
+      <div className="topBar"><div className="topBarTitle">Create an account</div></div>
       <div className="mainContent">
         <div className="formWrapper1">
           <Input title="Full name" placeholder="Enter your name" />
