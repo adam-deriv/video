@@ -8,7 +8,7 @@ export function useSignIn() {
       new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve(true);
-        }, 3000);
+        }, 2000);
       }),
       { enabled: isSigning, onSuccess: () => appService.send('SIGNED') }
     )

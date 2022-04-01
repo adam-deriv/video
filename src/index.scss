@@ -162,3 +162,59 @@ body {
 .topBarRight {
   margin-right: 40px;
 }
+
+.videoList {
+  display: flex;
+}
+
+.videoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoItemImage {
+  width: 276px;
+  height: 155px;
+  // background image videoThumbnail.png
+  background-image: url("/img/videoThumbnail.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.videoItemOptions {
+  // background image overflowIcon.svg
+  background-image: url("/img/overflowIcon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.videoItemOption {
+  display: none;
+}
+
+.videoItemTitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text-01);
+  line-height: 18.75px;
+}
+
+.videoItemTags {
+  display: flex;
+}
+
+.videoItemTag {
+  border: 1px solid var(--border);
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 3px 13px;
+}
