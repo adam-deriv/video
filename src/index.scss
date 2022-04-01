@@ -41,8 +41,16 @@ body {
 .formWrapper1 {
   margin-bottom: 20px;
 }
-[data-responsive*='desktop'] .formWrapper1 {
-  margin-top: 163px;
+
+[data-responsive*='desktop'] [data-app~='login'],
+[data-responsive*='desktop'] [data-app~='checking'] {
+  .formWrapper1 {
+    margin-top: 163px;
+  }
+}
+
+[data-responsive*='desktop'] [data-app~='signup'] .formWrapper1 {
+  margin-top: 50px;
 }
 
 .formWrapper2 {
@@ -81,55 +89,6 @@ body {
   line-height: 19.5px;
   color: var(--text-interactive);
   cursor: pointer;
-}
-
-.sidebar {
-  width: 102px;
-  height: calc(100% - 80px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-right: 1px solid var(--sidebar-border);
-  margin: 40px 0px;
-}
-
-@mixin sidebarIcon {
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-}
-
-.sidbarAppLogo {
-  margin-top: 15px;
-  background-size: 34px;
-  background-image: url("/img/appLogo.svg");
-  @include sidebarIcon;
-}
-
-.sidebarAppCreate {
-  margin-top: 70px;
-  background-size: 25px;
-  background-image: url("/img/videoIcon.svg");
-  @include sidebarIcon;
-  display: none;
-}
-
-.sidebarAppBrowse {
-  margin-top: 30px;
-  background-size: 40px;
-  background-image: url("/img/browseIcon.svg");
-  @include sidebarIcon;
-  display: none;
-}
-
-.sidebarAppProfile {
-  margin-top: auto;
-  margin-bottom: 20px;
-  background-image: url("/img/profileIcon.svg");
-  @include sidebarIcon;
-  display: none;
 }
 
 .signupWrapper {

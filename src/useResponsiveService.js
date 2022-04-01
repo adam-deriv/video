@@ -27,25 +27,25 @@ const screenSizesEnum = {
 
 export const useResponsiveService = () => {
     const checkWidth = () => {
-        if (window.outerWidth >= screenSizesEnum.screen4k.width) {
+        if (window.innerWidth >= screenSizesEnum.screen4k.width) {
             responsiveSerivce.send("GO_SCREEN4K");
         }
-        if (window.outerWidth >= screenSizesEnum.laptopL.width && window.outerWidth < screenSizesEnum.screen4k.width) {
+        if (window.innerWidth >= screenSizesEnum.laptopL.width && window.innerWidth < screenSizesEnum.screen4k.width) {
             responsiveSerivce.send("GO_LAPTOP_L");
         }
-        if (window.outerWidth >= screenSizesEnum.laptop.width && window.outerWidth < screenSizesEnum.laptopL.width) {
+        if (window.innerWidth >= screenSizesEnum.laptop.width && window.innerWidth < screenSizesEnum.laptopL.width) {
             responsiveSerivce.send("GO_LAPTOP");
         }
-        if (window.outerWidth >= screenSizesEnum.tablet.width && window.outerWidth < screenSizesEnum.laptop.width) {
+        if (window.innerWidth >= screenSizesEnum.tablet.width && window.innerWidth < screenSizesEnum.laptop.width) {
             responsiveSerivce.send("GO_TABLET");
         }
-        if (window.outerWidth >= screenSizesEnum.mobileL.width && window.outerWidth < screenSizesEnum.tablet.width) {
+        if (window.innerWidth >= screenSizesEnum.mobileL.width && window.innerWidth < screenSizesEnum.tablet.width) {
             responsiveSerivce.send("GO_MOBILE_L");
         }
-        if (window.outerWidth >= screenSizesEnum.mobileM.width && window.outerWidth < screenSizesEnum.mobileL.width) {
+        if (window.innerWidth >= screenSizesEnum.mobileM.width && window.innerWidth < screenSizesEnum.mobileL.width) {
             responsiveSerivce.send("GO_MOBILE_M");
         }
-        if (window.outerWidth >= screenSizesEnum.mobileS.width && window.outerWidth < screenSizesEnum.mobileM.width) {
+        if (window.innerWidth >= screenSizesEnum.mobileS.width && window.innerWidth < screenSizesEnum.mobileM.width) {
             responsiveSerivce.send("GO_MOBILE_S");
         }
     };
@@ -55,5 +55,5 @@ export const useResponsiveService = () => {
         () => {
             window.removeEventListener("resize", checkWidth);
         }
-    }, [window.outerWidth]);
+    }, [window.innerWidth]);
 }
