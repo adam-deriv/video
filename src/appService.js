@@ -12,7 +12,7 @@ const isLoginValid = (_, event) => {
 }
 
 export const appMachine =
-    /** @xstate-layout N4IgpgJg5mDOIC5QEMAOqB0sCWUB2ArqgMQDKAkgOIByA+gKoAKioqA9jgC7Zt4sgAPRAFoAjAAZRGAJwBmaQCYAbOKVKA7LPXiFAGhABPEVvEz16xbIXyALLNGiAvo-1pMOfEWKUA8rQAyPpTk1PzsXDx8SILGogAcGOo2OjYKCgCs4pk2+kYIwlpKGErS6RmK6XH2orLOrugYADZsUNh43n4UNExhHNjcvPxC+fYJSSlpmdm5xgoJJWVxdkqiNnHiNnUgbk0tbWRUdCG9EYPRwwVzickKqRlZGzP5c6YLsuLSNkpfNqVbOwA3bAQMBsDAAIwATmwAO6wMDEADCACUAKIAQQAKqiTv1IkNEGspO9vhJ1JV1Mo9IYRGlZGYLLJ0hYJKJ0koFP8GkCQWDkABjThsSEdWgANR85EROOi4TxZ1Aw2kCXZ4nG9m0GiqT3S8QwvzkuukDm+SS5mB5oIwAqFIt8tAAQujEQBpSjInz0agAEVxAyiisQyowqvVok16m1NIQd310k+OgcFjizPNGEtfMFwtF6P8hwAsqjqJi-fjzkGVSowxGo3kbNo43I2WskjYammM9as3a-N7UaQUeRGJjyD5QrK+v6CTGHDIlOtxHFJtJvk8rNJG7IlOy5OY-i5ttzgVabdn7c7MT5kaWFTEEMHQ8kNapI7I10lN9uSloLOkO8fM1tMh0TFGVWEnMtAxjOJiVUNs1QpKknjEckGTieMt3nD5Un-Xku1tb04H5SFsFQf1gNAm8AzvNspBXBcl3KVdozUdQZAw7RRGsckNlwk9+X5NgCDwThRUYD0ADFyH8MCQDlKdywQawpEkeQFA2Gx0nSFdRGQ7cMHeesHi0mCPjiPjM0E4TRPtB1pLzahKCo6dlIwVTFA0rSdOQ8MDI2NQ4iUewVHrJYLK7KyRLE-x0XHcDTmo4ZXPc9SbE07SVh8mo-K+eJUjKNRtws0UHQ9AB1UhZPkyCaPpR9xGfLUMmQhQ9WULJZCXNL1BUVZivPRFL2vCcEunOwQyrJ9wxfJd0mQ2RxvrX9kgahw4nUfq-GdRFPWLZzFPG+rGsjZrozEDIMHWXKlgyZQ1D-LY8DYEF4GiHYPEIVB9qglCNy0hRyS05I220OJ5u+YoFHjOwlh69kMjTZpWmo6rbwuZJ0jcsplSC40uOkcHMbKLj53UuIl1EIqD0BACIWhOEwG+u94g3Q1GXrDR1MplrZ2NDJ0JWViofC09IXw4UmaSwKQ00hrNKbXU5ujTrTFh5IgoCrmRe7dM2GwflGZG+VEsQOYinSWWFu0+xFZ1W5LvrLd1I0CRlW121rUaXA8AAWzAETJdN6WLcyK2FbZJ4OYdzQMm+KGGvM6mjzw0WIQFABrKBoWEiBA6U4PLflm2I+jVIElhpk1S+NU5lqJOLVp0W84-I7pq1N9ozmDcDVkXv1Jj9I6-qBuU+7QjYGI0iFPi43p2tjBlDWDyU2kVQ13kNzTSsVqNVSTZ6-TRuBKEkSMFQaEADNsEaQ2Z+nu8tCJqHBasXUrE05DKhkdkSl+cQ5ZTE4A+nYBSRU4BCa+Xs8BQDzo-EMz9KavxqLcJWeQxCmFKPdWGKxUiYW1mAs+jRkAowgmjRAcDsYvwyMgj+Z0JBFEwWoaQFh1Dhk+JyYBR8wF537m5GoHk0peUynQ4MhltwfCTP3ROw9D68jzqIP6k1Vo1lOmgsu+o9yBSXsyM25o87CFSBuLIUNAryAcFDT+kgNG-lbIFXU5JnDOCAA */
+    /** @xstate-layout N4IgpgJg5mDOIC5QEMAOqB0sCWUB2ArqgMQDKAkgOIByA+gKoAKioqA9jgC7Zt4sgAPRAFoAjADZxGAOwAmACziAzONkAGNQE4lAVnEAaEAE8R6nRnmjZ4teM3jpSzbLkBfV4bSYc+IsUoA8rQAMgGU5NT87Fw8fEiCIkqiABwy8moKsrI6ajnyhiYIwkrSUnY62c46yUmiSu6e6BgANmxQ2Hj+QRQ0TFEc2Ny8-EJFSanS6ZnZuWr5xomyqeVL8iqi8slzDSBeLW0dZFR0Ef0xw-GjxUtpGfJZOXkFplsY5Upail+aOjt7AG7YCBgNgYABGACc2AB3WBgYgAYQASgBRACCABUUWdBrERohNqIMB9xJY1NJqnJVM8ilklBhNNJpNodMzRGpRHpZH8moDgaDkABjThsCFdWgANQC5AR2Pi0VxF1Ao00qT05PSSWktmkNRpOhSFk0LNEmlEEnkkx5mD5IIwQpFYsCtAAQmiEQBpShIgL0agAERxQziysQqow6smai1Or1CwQ91kRs0U3NzOSrOtGFtAuFovFaOCxwAsijqBig3jLmG1TYozGHHHCpa1MmkjpNpNLPUPLteUC7Q7887-SjSMjyIwMeQApF5QNg-iE+aGeItmpkg97PNCkpZJo2+I9NomT8szn7XmnUF3RiAkjK0qEghw5HNaJtY2lDSSvJD8eSmZX5ewBAdc0dMg0QlOVWAXKtQwTZIiRJMkKWSKlZBpMQKQZJlkmNFQ10+bkQP7flL0df04EFCFsFQYNIOgx8Q2fSwiXsddN0qUkaUkaQGQI7UrBKPJzzAy9BTYAg8E4cVGB9AAxchghgkAFUXasEFkJIMA5Jx1HkeQdB0exRCwo9iTmbVHmqdlVTE8ihUk6TZOdF1lKLahKGYpdtKJPTnDmIyTPEMz42wyzFDXZQJCs5J5AcwdBWcmS5OCNE51g84WNGPzdLqQLDOM0ysPNekPkUFJ7gqSQj0SthxRdH0AHVSFU9T4NY+k32jD9Y2yLDZENaxciUTdDNKDkEtIm0wILBE7wfedsqXNYIzrd9P11AbwqUNbLSA9JepSaR6vmhFfXLHzNLWnqG22nRSuyDAtkq+LsmsSRgMabxcDwDooCOGgUUDZbFRykQNlbPd7BsJDjKZEoaXZcx90pOwMjNDNgN7PA2GBeB4j2HxCFQa6EOwg9jJcYyOzmPrkiwlQ-1UY01ni0ouW+vtMFadoWI6p8rnScxcn3ZJlDNKxNCZiyKisNd1GSTcJG50DyMhGE4XJ58UgPFlmT20o5A5AxwqG9irGqUy+P3eqKNFB2IR13KJYjIzoyM7ROU5H9Xg59JlEkTcOXtocIWzNhsEFMAXcQJYpA7HI9pM9tffjCo-w5lR1AcOzkjDq97WaP6AFswBkuOtLdpPPdTn3HvjS0pGz7JSX3aMC5m7NxPD8EhQAaygKFpIgKuE-d5OvbTxvmxubOckmOslh7H6e8cq8q8mdaNV6ram3j-C2yUPdyT3DtC8o6jaPozrBYhhBU4waxNkCjNNFsH8nF00lHCyOoPz3GmmvC8TkpIyQwKgKEAAzbAzRY5gw0ghESEZ9yhWUNkOoChZ4iGqAyPQdh5Af09hmUQhcUqcHBHAkueAoBVxQRUG258sFGVKq2H4X0OahXuIRch4DKGoGaMgAWcEhaIAYWgiQzC9ysPCuyKQHDJCMkZB+FMJEQG92Svw8e5J8r6SCsVUKpVwwVSPFoNM6hdT1SrqaHe9Y+qNh2oUYQ9xUgHWcEQ1QppShZhJgDKu1wpDRmkOaRkjgFY7kQBUGQ6hjQfn3OkLuP0An3APGLVUktzT7iwjkIk7jPrxW3GQ9wrggA */
     createMachine({
   id: "app",
   initial: "login",
@@ -20,7 +20,7 @@ export const appMachine =
     signup: {
       on: {
         SIGN_UP: {
-          target: "video",
+          target: "signing",
         },
         GO_LOGIN: {
           target: "login",
@@ -32,13 +32,9 @@ export const appMachine =
         GO_SIGNUP: {
           target: "signup",
         },
-        SIGN_IN: [
-          {
-            cond: isLoginValid,
-            target: "video",
-          },
-          {},
-        ],
+        SIGN_IN: {
+          target: "signing",
+        },
       },
     },
     video: {
@@ -116,6 +112,13 @@ export const appMachine =
         },
         GO_ACCOUNT: {
           target: ".account",
+        },
+      },
+    },
+    signing: {
+      on: {
+        SIGNED: {
+          target: "video",
         },
       },
     },
