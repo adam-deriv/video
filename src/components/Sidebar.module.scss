@@ -53,6 +53,12 @@
     display: block;
 }
 
+[data-app~="video.browse"] .sidebarAppBrowse {
+    background-image: url("/img/browseIconActive.svg");
+    background-color: var(--icon-active);
+    border-radius: 10px;
+}
+
 .sidebarAppProfile {
     margin-top: auto;
     margin-bottom: 20px;
