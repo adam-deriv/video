@@ -22,7 +22,8 @@ export default function Login() {
             title="Password"
             type="password"
             placeholder="Enter your password"
-            onChange={(e) => setLoginPassword(e.target.value)}
+            onChange={(e) => {setLoginPassword(e.target.value); appService.send('IDLE')}}
+            label={<div className="wrongPassword">Wrong password</div>}
           />
         </div>
         <div className="formWrapper3">

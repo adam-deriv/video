@@ -11,6 +11,7 @@
   --placeholder: #CCCCCC;
   --focused: #5C90F3;
   --sidebar-border: #0000001a;
+  --wrong-password: #FF0000;
 }
 
 body {
@@ -44,6 +45,16 @@ body {
   font-size: 14px;
   line-height: 21px;
   cursor: pointer;
+}
+
+@mixin disabledButton {
+  background: #999999;
+  color: #CCCCCC;
+  cursor: not-allowed;
+}
+
+[data-app~="checking"] .buttonApp {
+  @include disabledButton;
 }
 
 .formWrapper1 {
@@ -217,4 +228,21 @@ body {
   box-sizing: border-box;
   border-radius: 6px;
   padding: 3px 13px;
+}
+
+.wrongPassword {
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--wrong-password);
+  padding-right: 2px;
+  display: none;
+}
+
+[data-app~="login.wrongPassword"] .wrongPassword {
+  display: block;
 }
