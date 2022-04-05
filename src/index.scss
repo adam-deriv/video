@@ -6,14 +6,15 @@
   --text-02: #000000;
   --text-03: #333333;
   --text-interactive: #3860AD;
-  --text-button: #FFFFFF;
-  --border: #999999;
+  --background-01: #FFFFFF;
+  --secondary-01: #999999;
   --placeholder: #CCCCCC;
   --focused: #5C90F3;
   --sidebar-border: #0000001a;
   --wrong-password: #FF0000;
   --item-background: #F4F4F4;
   --icon-active: #EBF2FF;
+  --logout-button: #EE6363;
 }
 
 body {
@@ -35,18 +36,92 @@ body {
   display: flex;
 }
 
+.avatarImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/img/profileImage.png");
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.avatarOptions {
+  width: 32px;
+  height: 32px;
+  background-image: url("/img/editProfile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 32px;
+}
+
+.accountInfo {
+  display: flex;
+  // wrap
+  flex-wrap: wrap;
+  // margin bottom
+  margin-bottom: 20px;
+}
+
+.accountTabs {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.accountTab {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--secondary-01);
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+[data-app~="video.account.profile"] .accountProfile {
+  color: var(--text-interactive);
+}
+
+[data-app~="video.account.billing"] .accountBilling {
+  color: var(--text-interactive);
+}
+
+[data-app~="video.account.plan"] .accountPlan {
+  color: var(--text-interactive);
+}
+
 .buttonApp {
   padding: 6px 20px;
   border-radius: 6px;
   background: var(--primary-01);
   border: none;
-  color: var(--text-button);
+  color: var(--background-01);
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
   cursor: pointer;
+}
+
+.buttonLogout {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  /* identical to box height */
+  text-align: right;
+  cursor: pointer;
+  color: var(--logout-button);
+  // no border
+  border: none;
+  background-color: var(--background-01);
 }
 
 @mixin disabledButton {
@@ -235,12 +310,12 @@ body {
 }
 
 .videoItemTag {
-  border: 1px solid var(--border);
+  border: 1px solid var(--secondary-01);
   box-sizing: border-box;
   border-radius: 6px;
   padding: 3px 13px;
   margin-left: 5px;
-  color: var(--border);
+  color: var(--secondary-01);
 }
 
 .wrongPassword {

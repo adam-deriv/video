@@ -1,20 +1,22 @@
+import { appService } from "./appService";
+
 export default function VideoAccount() {
     return (
         <div className="mainWrapper">
             <div className="topBar">
                 <div className="topBarTitle">My Account</div>
                 <div className="topBarRight">
-                    <button className="logountButton" onClick={() => console.log('logout')}>Logout</button>
+                    <button className="buttonLogout" onClick={() => appService.send('LOGOUT')}>Logout</button>
                 </div>
             </div>
             <div className="accountTabs">
-                <span className="accountTab">
+                <span className="accountTab accountProfile" onClick={() => appService.send('GO_PROFILE')}>
                     Profile
                 </span>
-                <span className="accountTab">
+                <span className="accountTab accountPlan" onClick={() => appService.send('GO_PLAN')}>
                     My Plan
                 </span>
-                <span className="accountTab">
+                <span className="accountTab accountBilling" onClick={() => appService.send('GO_BILLING')}>
                     Billing
                 </span>
             </div>

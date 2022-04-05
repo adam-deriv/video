@@ -1,3 +1,4 @@
+import { appService } from '../appService';
 import styles from './Sidebar.module.scss';
 
 export default function Sidebar () {
@@ -6,7 +7,7 @@ export default function Sidebar () {
       <div className={styles.sidbarAppLogo} />
       <div className={styles.sidebarAppCreate} />
       <div className={styles.sidebarAppBrowse} />
-      <div className={styles.sidebarAppProfile} />
+      <div className={styles.sidebarAppProfile} onClick={() => appService.send('GO_ACCOUNT')}/>
     </div>
   )
 }
