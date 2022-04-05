@@ -203,6 +203,7 @@ const Plan = ({source}) => {
     if (source === 'agency' && isAccountPlanTeam) return 'Upgrade';
     if (source === 'agency' && isAccountPlanPro) return 'Upgrade';
     if (source === 'agency' && isAccountPlanFree) return 'Upgrade';
+    return 'Downgrade';
 }
 
 

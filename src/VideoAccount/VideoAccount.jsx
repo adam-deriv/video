@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { appService } from "../appService";
 import Loading from "../components/Loading";
 import './VideoAccount.scss';
+import VideoAccountBilling from "./VideoAccountBilling";
 import VideoAccountPlan from "./VideoAccountPlan";
 import VideoAccountProfile from "./VideoAccountProfile";
 
@@ -49,7 +50,7 @@ function VideoAccountContent() {
         <Suspense fallback={<Loading />}><VideoAccountPlan /></Suspense>
     )
     if (isAccountBilling) return (
-        <Suspense fallback={<Loading />}><VideoAccountPlan /></Suspense>
+        <Suspense fallback={<Loading />}><VideoAccountBilling /></Suspense>
     )
     return (
         <Loading />

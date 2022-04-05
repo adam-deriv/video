@@ -1,0 +1,52 @@
+@mixin sortIcon {
+    width: 8px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.arrowUpIcon {
+    @include sortIcon;
+    background: url(/img/arrowUp.svg) no-repeat center center;
+}
+
+.arrowDownIcon {
+    @include sortIcon;
+    background: url(/img/arrowDown.svg) no-repeat center center;
+}
+
+table {
+    padding: 38px;
+}
+
+th {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--secondary-01);
+    text-align: left;
+}
+
+td {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--text-01);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 70px;
+}
+
+.pdfIcon {
+    background-image: url(/img/pdfIcon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
