@@ -54,8 +54,6 @@ const initialState = {
     ]
 }
 
-// const blob = new Blob(["testing"], { type: "application/pdf" });
-// const url = URL.createObjectURL(blob);
 const downloadInvoice = (invoice) => {
     const blob = new Blob([invoice], { type: "application/pdf" });
     const url = URL.createObjectURL(blob);
@@ -65,7 +63,6 @@ const downloadInvoice = (invoice) => {
     link.click();
 };
 
-// render with columns and data and useTable
 const Table = () => {
     const {
         getTableProps,
