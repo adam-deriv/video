@@ -1,0 +1,91 @@
+.plans {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--background-01);
+    width: 260px;
+}
+
+.planTitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--text-01);
+    margin-bottom: 20px;
+}
+
+.planDetail {
+    display: flex;
+    width: 80%;
+}
+
+.planDetailIconYes {
+    background-image: url(/img/yesPlan.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.planDetailSentence {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--text-03);
+}
+
+.planPrice {
+    margin-top: 12px;
+    display: flex;
+}
+
+.planPriceCurrency {
+    font-family: 'Poppins';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 25.5px;
+    color: var(--text-04);
+    padding-top: 13px;
+}
+
+.planPriceValue {
+    font-family: 'Poppins';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: var(--text-04);
+}
+
+.planButtonDowngrade {
+    margin-top: 11px;
+}
+
+.planButton {
+    height: 48px;
+    width: 212px;
+    background-color: var(--background-02);
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--text-interactive);
+    border-radius: 6px;
+}
