@@ -7,7 +7,7 @@ import { appService, useAppService } from './appService';
 import Loading from './components/Loading';
 import { useSignIn } from './useSignIn';
 import Sidebar from './components/Sidebar';
-import VideoAccount from './VideoAccount';
+import VideoAccount from './VideoAccount/VideoAccount';
 
 export const isLoginSelector = (state) => state.matches('login');
 export const isSignupSelector = (state) => state.matches('signup');

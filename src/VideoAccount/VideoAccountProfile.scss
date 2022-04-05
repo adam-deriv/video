@@ -1,0 +1,52 @@
+.accountProfileWrapper {
+    padding-left: 40px;
+}
+
+.accountInfo {
+    display: flex;
+    // wrap
+    flex-wrap: wrap;
+    // margin bottom
+    margin-bottom: 20px;
+  }
+
+.accountInfoItem {
+    padding-top: 40px;
+    padding-right: 40px;
+}
+
+.accountInfoInput {
+    width: 360px;
+}
+
+.accountInfoSave {
+    margin-top: 40px;
+}
+
+  .avatarWrapper {
+      display: flex;
+      align-items: center;
+  }
+
+.avatarImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/img/profileImage.png");
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  .avatarOptions {
+    width: 32px;
+    height: 32px;
+    background-image: url("/img/editProfile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px;
+    margin-left: 20px;
+    margin-top: 20px;
+  }

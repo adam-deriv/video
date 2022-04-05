@@ -36,65 +36,6 @@ body {
   display: flex;
 }
 
-.avatarImage {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("/img/profileImage.png");
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-.avatarOptions {
-  width: 32px;
-  height: 32px;
-  background-image: url("/img/editProfile.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 32px;
-}
-
-.accountInfo {
-  display: flex;
-  // wrap
-  flex-wrap: wrap;
-  // margin bottom
-  margin-bottom: 20px;
-}
-
-.accountTabs {
-  display: flex;
-  height: 60px;
-  align-items: center;
-  padding-left: 10px;
-}
-
-.accountTab {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 22px;
-  color: var(--secondary-01);
-  margin-left: 30px;
-  cursor: pointer;
-}
-
-[data-app~="video.account.profile"] .accountProfile {
-  color: var(--text-interactive);
-}
-
-[data-app~="video.account.billing"] .accountBilling {
-  color: var(--text-interactive);
-}
-
-[data-app~="video.account.plan"] .accountPlan {
-  color: var(--text-interactive);
-}
-
 .buttonApp {
   padding: 6px 20px;
   border-radius: 6px;
