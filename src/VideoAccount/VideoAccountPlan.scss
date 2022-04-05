@@ -6,10 +6,11 @@
 .plan {
     display: flex;
     flex-direction: column;
-    margin: 20px;
-    padding: 20px;
+    margin: 20px 0px 20px 20px;
+    padding: 20px 0px 20px 20px;
     background-color: var(--background-01);
     width: 260px;
+    border-radius: 10px;
 }
 
 .planTitle {
@@ -29,6 +30,17 @@
 
 .planDetailIconYes {
     background-image: url(/img/yesPlan.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.planDetailIconNo {
+    background-image: url(/img/noPlan.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -71,7 +83,7 @@
     color: var(--text-04);
 }
 
-.planButtonDowngrade {
+.planButtonWrapper {
     margin-top: 11px;
 }
 
@@ -88,4 +100,48 @@
     text-align: center;
     color: var(--text-interactive);
     border-radius: 6px;
+    cursor: pointer;
+}
+
+@mixin currentPlan{
+    background-color: var(--primary-01);
+    margin-top: 0px;
+    .planTitle, .planDetailSentence, .planPriceCurrency, .planPriceValue {
+        color: var(--background-01);
+    }
+    .planDetailIconYes {
+        background-image: url(/img/yesPlanCurrent.svg);
+    }
+    .planDetailIconNo {
+        background-image: url(/img/noPlanCurrent.svg);
+    }
+    .planButton {
+        background-color: var(--primary-01);
+        color: var(--primary-02);
+        cursor: default;
+    }
+}
+
+[data-app~="video.account.plan.team"] {
+    .team {
+        @include currentPlan;
+    }
+}
+
+[data-app~="video.account.plan.free"] {
+    .free {
+        @include currentPlan;
+    }
+}
+
+[data-app~="video.account.plan.pro"] {
+    .pro {
+        @include currentPlan;
+    }
+}
+
+[data-app~="video.account.plan.agency"] {
+    .agency {
+        @include currentPlan;
+    }
 }
