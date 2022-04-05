@@ -59,6 +59,13 @@
     border-radius: 10px;
 }
 
+[data-app~="video.actor"] .sidebarAppCreate {
+    background-image: url("/img/videoIconActive.svg");
+    background-size: 53px;
+    background-color: var(--icon-active);
+    border-radius: 10px;
+}
+
 .sidebarAppProfile {
     margin-top: auto;
     margin-bottom: 20px;

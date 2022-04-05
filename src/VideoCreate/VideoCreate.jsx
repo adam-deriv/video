@@ -1,12 +1,14 @@
-import { appService } from "./appService";
+import { appService } from '../appService'
+import './VideoCreate.scss'
 
-export default function VideoBrowse() {
+export default function VideoCreate() {
     return (
         <div className="mainWrapper">
             <div className="topBar">
-                <div className="topBarTitle">Saved Videos</div>
+                <div className="topBarTitle">Saying Hi to my customers</div>
                 <div className="topBarRight">
-                    <button className="buttonApp" onClick={() => appService.send('GO_ACTOR')}>Create New</button>
+                    <button className="buttonAppSecondary" onClick={() => appService.send('GO_BROWSE')}>Save</button>
+                    <button className="buttonApp" onClick={() => appService.send('GO_BROWSE')}>Save</button>
                 </div>
             </div>
             <div className="videoList">
@@ -36,4 +38,4 @@ export default function VideoBrowse() {
             </div>
         </div>
     )
-};
+}

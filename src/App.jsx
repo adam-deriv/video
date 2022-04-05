@@ -8,6 +8,7 @@ import Loading from './components/Loading';
 import { useSignIn } from './useSignIn';
 import Sidebar from './components/Sidebar';
 import VideoAccount from './VideoAccount/VideoAccount';
+import VideoCreate from './VideoCreate/VideoCreate';
 
 export const isLoginSelector = (state) => state.matches('login');
 export const isSignupSelector = (state) => state.matches('signup');
@@ -15,6 +16,7 @@ export const isSigningSelector = (state) => state.matches('signing');
 export const isCheckingSelector = (state) => state.matches('checking');
 export const isVideoBrowserSelector = (state) => state.matches('video.browse');
 export const isVideoAccountSelector = (state) => state.matches('video.account');
+export const isVideoAccountCreateSelector = (state) => state.matches('video.actor');
 
 const SignIn = lazy(() => import('./Login'));
 const SignUp = lazy(() => import('./SignUp'));
@@ -31,6 +33,7 @@ function LazyApp() {
   const isChecking = useSelector(appService, isCheckingSelector);
   const isVideoBrowse = useSelector(appService, isVideoBrowserSelector);
   const isVideoAccount = useSelector(appService, isVideoAccountSelector);
+  const isVideoAccountCreate = useSelector(appService, isVideoAccountCreateSelector);
   if (isLogin || isChecking) return (
       <Suspense fallback={<Loading />}><SignIn /></Suspense>
   )
@@ -42,6 +45,9 @@ function LazyApp() {
   )
   if (isVideoAccount) return (
       <Suspense fallback={<Loading />}><VideoAccount /></Suspense>
+  )
+  if (isVideoAccountCreate) return (
+      <Suspense fallback={<Loading />}><VideoCreate /></Suspense>
   )
   return (
       <Loading />

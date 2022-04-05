@@ -55,7 +55,7 @@ export const appMachine =
       },
     },
     video: {
-      initial: "browse",
+      initial: "actor",
       states: {
         browse: {
           on: {
