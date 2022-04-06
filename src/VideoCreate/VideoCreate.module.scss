@@ -1,0 +1,35 @@
+.videoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--item-background);
+    border-radius: 6px;
+    margin: 30px;
+  }
+  
+.videoItemImage {
+    width: 200px;
+    height: 155px;
+    background-image: url("/img/createVideoImage.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+.topBarTitle {
+  font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-01);
+    line-height: 33px;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
