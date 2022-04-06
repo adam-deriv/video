@@ -65,7 +65,7 @@ export const appMachine =
           },
         },
         actor: {
-          initial: "alignment",
+          initial: "actor",
           states: {
             actor: {},
             voice: {},

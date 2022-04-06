@@ -1,29 +1,11 @@
-.accountTabs {
-    display: flex;
-    height: 60px;
-    align-items: center;
-    padding-left: 10px;
-  }
-  
-  .accountTab {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 22px;
-    color: var(--secondary-01);
-    margin-left: 30px;
-    cursor: pointer;
-  }
-  
-  [data-app~="video.account.profile"] .accountProfile {
+[data-app~="video.account.profile"] .accountProfile {
     color: var(--text-interactive);
-  }
-  
-  [data-app~="video.account.billing"] .accountBilling {
+}
+
+[data-app~="video.account.billing"] .accountBilling {
     color: var(--text-interactive);
-  }
-  
-  [data-app~="video.account.plan"] .accountPlan {
+}
+
+[data-app~="video.account.plan"] .accountPlan {
     color: var(--text-interactive);
-  }
+}

@@ -78,3 +78,16 @@
   margin-left: 30px;
   margin-bottom: 13px;
 }
+
+[data-app~="video.actor.actor"] .actor {
+  color: var(--text-interactive);
+}
+[data-app~="video.actor.voice"] .voice {
+  color: var(--text-interactive);
+}
+[data-app~="video.actor.alignment"] .alignment {
+  color: var(--text-interactive);
+}
+[data-app~="video.actor.background"] .background {
+  color: var(--text-interactive);
+}

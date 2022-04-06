@@ -1,7 +1,7 @@
 import { appService } from '../appService'
 import styles from'./VideoCreate.module.scss'
 
-export default function VideoCreate() {
+export default function VideoCreate() { 
     return (
         <div className="mainWrapper">
             <div className="topBar">
@@ -26,6 +26,20 @@ export default function VideoCreate() {
                     </div>
                 </div>
                 <div className={styles.videoPreviewOptions}>
+                    <div className="accountTabs">
+                        <span className="accountTab" onClick={() => appService.send('GO_ACTOR')}>
+                            <div className={styles.actor}>Actor</div>
+                        </span>
+                        <span className="accountTab" onClick={() => appService.send('GO_VOICE')}>
+                            <div className={styles.voice}>Voice</div>
+                        </span>
+                        <span className="accountTab" onClick={() => appService.send('GO_ALIGNMENT')}>
+                            <div className={styles.alignment}>Alignment</div>
+                        </span>
+                        <span className="accountTab background" onClick={() => appService.send('GO_BACKGROUND')}>
+                            <div className={styles.background}>Background</div>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
