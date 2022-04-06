@@ -10,7 +10,7 @@
   }
   
 .videoPreviewImage {
-    width: 500px;
+    width: 700px;
     height: 394px;
     background-image: url("/img/createVideoImage.png");
     background-repeat: no-repeat;
@@ -22,10 +22,11 @@
 
 .videoPreviewWrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .videoPreviewOptions {
-  width: 50%;
+  max-width: 500px;
 }
 
 .videoPreviewDescription {
@@ -90,4 +91,8 @@
 }
 [data-app~="video.actor.background"] .background {
   color: var(--text-interactive);
+}
+
+.topSecondaryButton {
+  margin-right: 20px;
 }

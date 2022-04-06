@@ -1,0 +1,65 @@
+.actorsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.actorWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-right: 11px;
+}
+
+.actorName {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--text-05);
+    text-align: center;
+    margin-top: 2px;
+}
+
+@mixin actorImage {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+    height: 85px;
+    border-radius: 6px;
+}
+.anna {
+    background-image: url("/img/anna.png");
+    @include actorImage;
+}
+
+.may {
+    background-image: url("/img/may.png");
+    @include actorImage;
+}
+
+.mike {
+    background-image: url("/img/mike.png");
+    @include actorImage;
+}
+
+.peter {
+    background-image: url("/img/peter.png");
+    @include actorImage;
+}
+
+.skye {
+    background-image: url("/img/skye.png");
+    @include actorImage;
+}
+
+.vincent {
+    background-image: url("/img/vincent.png");
+    @include actorImage;
+}
+
+.yoyo {
+    background-image: url("/img/videoThumbnail.png");
+    @include actorImage;
+}

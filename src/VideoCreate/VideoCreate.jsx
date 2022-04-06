@@ -1,4 +1,8 @@
+import { useSelector } from '@xstate/react'
+import { Suspense } from 'react';
 import { appService } from '../appService'
+import Loading from '../components/Loading';
+import VideoActors from './VideoActors';
 import styles from'./VideoCreate.module.scss'
 
 export default function VideoCreate() { 
@@ -7,7 +11,7 @@ export default function VideoCreate() {
             <div className="topBar">
                 <div className="topBarTitle">Saying Hi to my customers</div>
                 <div className="topBarRight">
-                    <button className="buttonAppSecondary" onClick={() => appService.send('GO_BROWSE')}>Cancel</button>
+                    <div className={styles.topSecondaryButton}><button className="buttonAppSecondary" onClick={() => appService.send('GO_BROWSE')}>Cancel</button></div>
                     <button className="buttonApp" onClick={() => appService.send('GO_BROWSE')}>Save</button>
                 </div>
             </div>
@@ -21,7 +25,7 @@ export default function VideoCreate() {
                         an English script to any of 27 other languages" />
                         
                         <div className={styles.videoPreviewButtonWrapper}>
-                            <button className={styles.videoPreviewListenButton}>Listen</button>
+                            <button className="buttonAppSecondary">Listen</button>
                         </div>
                     </div>
                 </div>
@@ -40,8 +44,35 @@ export default function VideoCreate() {
                             <div className={styles.background}>Background</div>
                         </span>
                     </div>
+                    <VideoCreateOptions />
                 </div>
             </div>
         </div>
     )
+}
+
+const isVideoAccountCreateActorSelector = (state) => state.matches('video.actor.actor');
+const isVideoAccountCreateVoiceSelector = (state) => state.matches('video.actor.voice');
+const isVideoAccountCreateAlignmentSelector = (state) => state.matches('video.actor.alignment');
+const isVideoAccountCreateBackgroundSelector = (state) => state.matches('video.actor.background');
+
+
+function VideoCreateOptions() {
+    const isVideoAccountCreateActor = useSelector(appService, isVideoAccountCreateActorSelector);
+    const isVideoAccountCreateVoice = useSelector(appService, isVideoAccountCreateVoiceSelector);
+    const isVideoAccountCreateAlignment = useSelector(appService, isVideoAccountCreateAlignmentSelector);
+    const isVideoAccountCreateBackground = useSelector(appService, isVideoAccountCreateBackgroundSelector);
+    if (isVideoAccountCreateActor) return (
+        <Suspense fallback={<Loading />}><VideoActors /></Suspense>
+    )
+    if (isVideoAccountCreateVoice) return (
+        <Suspense fallback={<Loading />}><VideoActors /></Suspense>
+    )
+    if (isVideoAccountCreateAlignment) return (
+        <Suspense fallback={<Loading />}><VideoActors /></Suspense>
+    )
+    if (isVideoAccountCreateBackground) return (
+        <Suspense fallback={<Loading />}><VideoActors /></Suspense>
+    )
+    return <Loading />
 }

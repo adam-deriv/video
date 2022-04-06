@@ -7,6 +7,7 @@
   --text-02: #000000;
   --text-03: #333333;
   --text-04: #181059;
+  --text-05: #666666;
   --text-interactive: #3860AD;
   --background-01: #FFFFFF;
   --background-02: #EBF2FF;
@@ -84,7 +85,6 @@ body {
   font-size: 14px;
   line-height: 21px;
   cursor: pointer;
-  margin-right: 20px;
 }
 
 .buttonLogout {
@@ -226,6 +226,7 @@ body {
 }
 
 .topBarRight {
+  display: flex;
   margin-right: 40px;
 }
 
