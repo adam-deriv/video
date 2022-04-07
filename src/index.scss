@@ -8,7 +8,7 @@
   --text-03: #333333;
   --text-04: #181059;
   --text-05: #666666;
-  --text-interactive: #3860AD;
+  --interactive: #3860AD;
   --background-01: #FFFFFF;
   --background-02: #EBF2FF;
   --background-03: #F1F1F1;
@@ -164,7 +164,7 @@ body {
   font-size: 13px;
   font-weight: 500;
   line-height: 19.5px;
-  color: var(--text-interactive);
+  color: var(--interactive);
   cursor: pointer;
 }
 

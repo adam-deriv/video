@@ -4,6 +4,7 @@ import { appService } from '../appService'
 import Loading from '../components/Loading';
 import VideoActors from './VideoActors';
 import styles from'./VideoCreate.module.scss'
+import VideoVoice from './VideoVoice';
 
 export default function VideoCreate() { 
     return (
@@ -66,7 +67,7 @@ function VideoCreateOptions() {
         <Suspense fallback={<Loading />}><VideoActors /></Suspense>
     )
     if (isVideoAccountCreateVoice) return (
-        <Suspense fallback={<Loading />}><VideoActors /></Suspense>
+        <Suspense fallback={<Loading />}><VideoVoice /></Suspense>
     )
     if (isVideoAccountCreateAlignment) return (
         <Suspense fallback={<Loading />}><VideoActors /></Suspense>

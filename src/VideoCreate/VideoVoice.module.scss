@@ -1,0 +1,22 @@
+.videoVoiceContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.videoVoice {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.play {
+    background-image: url(/img/pause.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px;
+    width: 30px;
+    height: 30px;
+    margin-right: 17px;
+    border-radius: 50%;
+    background-color: var(--secondary-01);
+}
