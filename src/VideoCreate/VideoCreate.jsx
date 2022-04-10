@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import { appService } from '../appService'
 import Loading from '../components/Loading';
 import VideoActors from './VideoActors';
+import VideoAlignment from './VideoAlignment';
 import styles from'./VideoCreate.module.scss'
 import VideoVoice from './VideoVoice';
 
@@ -70,7 +71,7 @@ function VideoCreateOptions() {
         <Suspense fallback={<Loading />}><VideoVoice /></Suspense>
     )
     if (isVideoAccountCreateAlignment) return (
-        <Suspense fallback={<Loading />}><VideoActors /></Suspense>
+        <Suspense fallback={<Loading />}><VideoAlignment /></Suspense>
     )
     if (isVideoAccountCreateBackground) return (
         <Suspense fallback={<Loading />}><VideoActors /></Suspense>

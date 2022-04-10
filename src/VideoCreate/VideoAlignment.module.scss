@@ -1,0 +1,23 @@
+.videoAlignmentContainer {
+    display: flex;
+}
+
+.videoAlignment {
+    padding: 13px 50px;
+    background: var(--background-03);
+    border-radius: 6px; 
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--secondary-01);
+    margin-right: 22px;
+    cursor: pointer;
+}
+
+.videoAlignmentSelected {
+    @extend .videoAlignment;
+    color: var(--interactive);
+    background: var(--background-02);
+}
