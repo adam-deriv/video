@@ -1,0 +1,31 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    display: flex;
+}
+
+.titleText {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--secondary-01);
+}
+
+.chevron {
+    width: 11px;
+    height: 7px;
+    margin-left: auto;
+    margin-right: 14px;
+    background-image: url(/img/chevronDown.svg);
+    background-size: contain;
+}
